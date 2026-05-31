@@ -7,5 +7,5 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "AWS Key Pair Name"
+  default = "my-aws-key"
 }
