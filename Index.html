@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator App</title>
+</head>
+<body>
+
+<h2>Simple Calculator</h2>
+
+<input id="a" placeholder="Enter A">
+<input id="b" placeholder="Enter B">
+
+<br><br>
+
+<button onclick="add()">Add</button>
+
+<h3 id="result"></h3>
+
+<script>
+function add() {
+  let a = Number(document.getElementById("a").value);
+  let b = Number(document.getElementById("b").value);
+
+  document.getElementById("result").innerHTML = "Result: " + (a + b);
+}
+</script>
+
+</body>
+</html>
