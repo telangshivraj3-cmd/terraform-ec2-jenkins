@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git'
+                git branch: 'main', url: 'https://github.com/telangshivraj3-cmd/terraform-ec2-jenkins.git'
             }
         }
 
@@ -17,13 +17,13 @@ pipeline {
 
         stage('Terraform Plan') {
             steps {
-                sh 'terraform plan'
+                sh 'terraform plan -var="key_name=jenkins-server"'
             }
         }
 
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply -auto-approve -var="key_name=jenkins-server"'
             }
         }
     }
